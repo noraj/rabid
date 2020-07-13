@@ -20,4 +20,4 @@ A CLI tool and library allowing to simply decode all kind of BigIP cookies.
 
 ## Author
 
-Made by Alexandre ZANNI ([@noraj](https://github.com/noraj)), pentester from Orange Cyberdefense.
+Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)).
