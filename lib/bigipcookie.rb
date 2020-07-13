@@ -85,16 +85,17 @@ class BigIPCookie
         opts[:reverse] = 0
       end
 
-      if opts[:ipversion] == 4
+      case opts[:ipversion]
+      when 4
         opts[:joinchar] = '.'
         opts[:scanby] = 2
-      elsif opts[:ipversion] == 6
+      when 6
         opts[:joinchar] = ':'
         opts[:scanby] = 4
       end
 
       ip = format('%02x', ip) if opts[:ip2hex] == 1 # ip to hex
-      ip = '0' + ip if ip.size % 2 == 1 # prepend a 0 when we have an odd number
+      ip = '0' + ip if ip.size.odd? # prepend a 0 when we have an odd number
       ip = ip.scan(/.{#{opts[:scanby]}}/) # split by n
       ip.reverse! if opts[:reverse] == 1 # reverse array
       ip = ip.map { |i| i.to_i(16) } if opts[:hex2ip] == 1 # hex to ip
@@ -168,7 +169,7 @@ class BigIPCookie
     # Return that the cookie is encrypted
     # @param cookie [String] raw cookie value
     # @return [String] Encrypted cookie detection message
-    def encrypted(cookie)
+    def encrypted(_cookie)
       return 'Unknown:Encrypted'
     end
 
@@ -190,7 +191,7 @@ class BigIPCookie
       return 601 if /rd([0-9]+)o([0-9a-zA-Z]{32})o([0-9]{1,5})/.match?(cookie)
 
       ## Encrypted
-      return 999 if /!(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?/.match?(cookie)
+      return 999 if %r{!(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?}.match?(cookie)
 
       raise 'Unrecognized cookie'
     end
@@ -201,19 +202,20 @@ class BigIPCookie
     # @return [String] the decoded cookie value
     def decode_cookie(cookie, opts = {})
       number = detect_cookie_type(cookie)
-      if number == 400
+      case number
+      when 400
         @cookie_type = 'IPv4 pool members'
         ipv4_pm(cookie)
-      elsif number == 401
+      when 401
         @cookie_type = 'IPv4 pool members in non-default route domains'
         ipv4_pm_ndrd(cookie)
-      elsif number == 600
+      when 600
         @cookie_type = 'IPv6 pool members'
         ipv6_pm(cookie, opts)
-      elsif number == 601
+      when 601
         @cookie_type = 'IPv6 pool members in non-default route domains'
         ipv6_pm_ndrd(cookie, opts)
-      elsif number == 999
+      when 999
         @cookie_type = 'Encrypted'
         encrypted(cookie)
       else
@@ -235,7 +237,7 @@ class BigIPCookie
     # @note
     #   .yardopts-dev must be used to get {decode_ip} documentation
     def auto_decode(opts = {})
-      if /\=/.match?(@raw_cookie) # if there is a key
+      if /=/.match?(@raw_cookie) # if there is a key
         if /^BIGipServer/.match?(@raw_cookie) # if default cookie name
           pool_name = retrieve_pool_name
           cookie_value = /^BIGipServer.*?=(.+)/.match(@raw_cookie).captures[0]

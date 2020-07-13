@@ -722,8 +722,6 @@
       <pre class="lines">
 
 
-237
-238
 239
 240
 241
@@ -739,13 +737,15 @@
 251
 252
 253
-254</pre>
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bigipcookie.rb', line 237</span>
+      <pre class="code"><span class="info file"># File 'lib/bigipcookie.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_auto_decode'>auto_decode</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\=</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='ivar'>@raw_cookie</span><span class='rparen'>)</span> <span class='comment'># if there is a key
+  <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='ivar'>@raw_cookie</span><span class='rparen'>)</span> <span class='comment'># if there is a key
 </span>    <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^BIGipServer</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='ivar'>@raw_cookie</span><span class='rparen'>)</span> <span class='comment'># if default cookie name
 </span>      <span class='id identifier rubyid_pool_name'>pool_name</span> <span class='op'>=</span> <span class='id identifier rubyid_retrieve_pool_name'>retrieve_pool_name</span>
       <span class='id identifier rubyid_cookie_value'>cookie_value</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^BIGipServer.*?=(.+)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='ivar'>@raw_cookie</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -772,7 +772,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Jul 13 21:19:20 2020 by
+  Generated on Mon Jul 13 22:36:25 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.7.1).
 </div>
