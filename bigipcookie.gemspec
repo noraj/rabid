@@ -6,13 +6,13 @@ Gem::Specification.new do |s|
   s.name          = 'rabid'
   s.version       = Version::VERSION
   s.platform      = Gem::Platform::RUBY
-  s.date          = '2020-03-02'
+  s.date          = '2020-07-13'
   s.summary       = 'RApid Big IP Decoder'
   s.description   = 'A library and CLI tool allowing to decode all 4 types'\
                     ' of BigIP cookies'
   s.authors       = ['Alexandre ZANNI']
   s.email         = 'alexandre.zanni@engineer.com'
-  s.homepage      = 'https://orange-cyberdefense.github.io/rabid/'
+  s.homepage      = 'https://noraj.github.io/rabid/'
   s.license       = 'MIT'
 
   s.files         = Dir['bin/*'] + Dir['lib/**/*.rb'] + ['LICENSE.txt']
@@ -22,11 +22,11 @@ Gem::Specification.new do |s|
 
   s.metadata = {
     'yard.run'          => 'yard',
-    'bug_tracker_uri'   => 'https://github.com/Orange-Cyberdefense/rabid/issues',
-    'changelog_uri'     => 'https://github.com/Orange-Cyberdefense/rabid/blob/master/docs/CHANGELOG.md',
-    'documentation_uri' => 'https://orange-cyberdefense.github.io/rabid/',
-    'homepage_uri'      => 'https://orange-cyberdefense.github.io/rabid/',
-    'source_code_uri'   => 'https://github.com/Orange-Cyberdefense/rabid/'
+    'bug_tracker_uri'   => 'https://github.com/noraj/rabid/issues',
+    'changelog_uri'     => 'https://github.com/noraj/rabid/blob/master/docs/CHANGELOG.md',
+    'documentation_uri' => 'https://noraj.github.io/rabid/',
+    'homepage_uri'      => 'https://noraj.github.io/rabid/',
+    'source_code_uri'   => 'https://github.com/noraj/rabid/'
   }
 
   s.required_ruby_version = '~> 2.4'

@@ -1,15 +1,15 @@
 # RABID
 
 [![Gem Version](https://badge.fury.io/rb/rabid.svg)](https://badge.fury.io/rb/rabid)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/Orange-Cyberdefense/rabid)
-[![GitHub forks](https://img.shields.io/github/forks/Orange-Cyberdefense/rabid)](https://github.com/Orange-Cyberdefense/rabid/network)
-[![GitHub stars](https://img.shields.io/github/stars/Orange-Cyberdefense/rabid)](https://github.com/Orange-Cyberdefense/rabid/stargazers)
-[![GitHub license](https://img.shields.io/github/license/Orange-Cyberdefense/rabid)](https://github.com/Orange-Cyberdefense/rabid/blob/master/LICENSE.txt)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/noraj/rabid)
+[![GitHub forks](https://img.shields.io/github/forks/noraj/rabid)](https://github.com/noraj/rabid/network)
+[![GitHub stars](https://img.shields.io/github/stars/noraj/rabid)](https://github.com/noraj/rabid/stargazers)
+[![GitHub license](https://img.shields.io/github/license/noraj/rabid)](https://github.com/noraj/rabid/blob/master/LICENSE.txt)
 [![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat.svg)](https://inventory.rawsec.ml/tools.html#Rabid)
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/rabid.svg)](https://repology.org/project/rabid/versions)
 
-![](https://orange-cyberdefense.github.io/rabid/_media/logo.png)
+![](https://noraj.github.io/rabid/_media/logo.png)
 
 > **RA**pid **B**ig **I**P **D**ecoder
 
@@ -25,7 +25,7 @@ A CLI tool and library allowing to simply decode all kind of BigIP cookies.
 
 ## References
 
-Homepage / Documentation: https://orange-cyberdefense.github.io/rabid/
+Homepage / Documentation: https://noraj.github.io/rabid/
 
 ## Author
 

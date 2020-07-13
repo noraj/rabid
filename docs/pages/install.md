@@ -59,7 +59,7 @@ $ gem install --development rabid
 Just replace `x.x.x` with the gem version you see after `gem build`.
 
 ```
-$ git clone https://github.com/Orange-Cyberdefense/rabid.git rabid
+$ git clone https://github.com/noraj/rabid.git rabid
 $ cd rabid
 $ gem install bundler
 $ bundler install

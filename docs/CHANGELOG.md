@@ -2,11 +2,15 @@
 
 ## [Unreleased]
 
+## [0.0.6]
+
 - bin: code simplification & lint
+- repo: From from [Orange-Cyberdefense/rabid](https://github.com/Orange-Cyberdefense/rabid) to [noraj/rabid](https://github.com/noraj/rabid/)
+- dependencies: update
 
 ## [0.0.5]
 
-- Fix a case when the encoded IP address in IPv4 pool members was decoded to an odd hexadecimal number resulting in a malformated IP address
+- Fix a case when the encoded IP address in IPv4 pool members was decoded to an odd hexadecimal number resulting in a malformed IP address
 - Fix the regexp for IPv4 pool members cookie were the encoded IP and port length was fix instead of variable
 - Add more test for those cases
 
