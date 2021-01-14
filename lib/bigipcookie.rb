@@ -95,7 +95,7 @@ class BigIPCookie
       end
 
       ip = format('%02x', ip) if opts[:ip2hex] == 1 # ip to hex
-      ip = '0' + ip if ip.size.odd? # prepend a 0 when we have an odd number
+      ip = "0#{ip}" if ip.size.odd? # prepend a 0 when we have an odd number
       ip = ip.scan(/.{#{opts[:scanby]}}/) # split by n
       ip.reverse! if opts[:reverse] == 1 # reverse array
       ip = ip.map { |i| i.to_i(16) } if opts[:hex2ip] == 1 # hex to ip

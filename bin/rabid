@@ -47,10 +47,10 @@ begin
     if args['--short']
       puts Paint[bip.decoded_cookie, :green]
     else
-      puts Paint['Pool name:', :white, :bold] + ' ' + bip.pool_name
-      puts Paint['Cookie type:', :white, :bold] + ' ' + bip.cookie_type
-      puts Paint['Raw cookie:', :white, :bold] + ' ' + bip.raw_cookie
-      puts Paint['Decoded cookie:', :white, :bold] + ' ' + Paint[bip.decoded_cookie, :green]
+      puts "#{Paint['Pool name:', :white, :bold]} #{bip.pool_name}"
+      puts "#{Paint['Cookie type:', :white, :bold]} #{bip.cookie_type}"
+      puts "#{Paint['Raw cookie:', :white, :bold]} #{bip.raw_cookie}"
+      puts "#{Paint['Decoded cookie:', :white, :bold]} #{Paint[bip.decoded_cookie, :green]}"
     end
   end
   # use case 2, help: already handled by docopt
