@@ -30,8 +30,6 @@ Style/AccessorGrouping:
   Enabled: false # for yard
 Style/BisectedAttrAccessor:
   Enabled: false # for yard
-Style/FormatStringToken:
-  Enabled: false # https://github.com/rubocop-hq/rubocop/issues/7944
 Style/RedundantReturn:
   Enabled: false
 
