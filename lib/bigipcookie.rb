@@ -51,25 +51,25 @@ class BigIPCookie
     # @!visibility public
     # @param ip [String] the encoded IP address
     # @param opts [Hash] options for the decoding process (only
-    #   :ipv6compression should be used, others are for developers)
-    # @option opts [Integer] :default default behavior, default value is 1, if
-    #   value is set to 0 it disables :ip2hex and :reverse
-    # @option opts [Integer] :ipversion 4 for IPv4 and 6 for IPv6, default is 4,
-    #   4 set :joinchar to '.' and :scanby to 2, 6 set :joinchar to ':' and
-    #   :scanby to 6
+    #   `:ipv6compression` should be used, others are for developers)
+    # @option opts [Integer] :default default behavior, default value is `1`, if
+    #   value is set to `0` it disables `:ip2hex` and `:reverse`
+    # @option opts [Integer] :ipversion `4` for IPv4 and `6` for IPv6, default is `4`,
+    #   `4` sets `:joinchar` to `.` and `:scanby` to `2`, `6` sets `:joinchar` to `:` and
+    #   `:scanby` to `6`
     # @option opts [Integer] :ip2hex encode IP address groups into hexadecimal,
-    #   default is 1, set to 0 disable
+    #   default is `1`, set to `0` disable
     # @option opts [Integer] :joinchar the character used to join the IP
-    #   address groups, default is '.' (IPv4), for example it can be set to
-    #   ':' for IPv6
+    #   address groups, default is `.` (IPv4), for example it can be set to
+    #   `:` for IPv6
     # @option opts [Integer] :hex2ip decode hexadecimal IP address groups to
-    #   decimal, default is 1, set 0 to disable
-    # @option opts [Integer] :reverse reverse the IP address groups if set to 1,
-    #   default is 1
-    # @option opts [Integer] :ipv6compression compress IPv6 address if set to 1,
-    #   default is 1
+    #   decimal, default is `1`, set `0` to disable
+    # @option opts [Integer] :reverse reverse the IP address groups if set to `1`,
+    #   default is `1`
+    # @option opts [Integer] :ipv6compression compress IPv6 address if set to `1`,
+    #   default is `1`
     # @option opts [Integer] :scanby parse the raw cookie value by n to find IP
-    #   address groups, default is 2 for IPv4 and 4 for IPv6
+    #   address groups, default is `2` for IPv4 and `4` for IPv6
     # @return [String] the decoded IP address
     def decode_ip(ip, opts = {})
       opts[:default] ||= 1
@@ -167,7 +167,7 @@ class BigIPCookie
     end
 
     # Return that the cookie is encrypted
-    # @param cookie [String] raw cookie value
+    # @param _cookie [String] raw cookie value
     # @return [String] Encrypted cookie detection message
     def encrypted(_cookie)
       return 'Unknown:Encrypted'
