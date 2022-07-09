@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version       = Version::VERSION
   s.platform      = Gem::Platform::RUBY
   s.summary       = 'RApid Big IP Decoder'
-  s.description   = 'A library and CLI tool allowing to decode all 4 types'\
-                    ' of BigIP cookies'
+  s.description   = 'A library and CLI tool allowing to decode all 4 types ' \
+                    'of BigIP cookies'
   s.authors       = ['Alexandre ZANNI']
   s.email         = 'alexandre.zanni@engineer.com'
   s.homepage      = 'https://noraj.github.io/rabid/'
