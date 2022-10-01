@@ -29,4 +29,4 @@ Homepage / Documentation: https://noraj.github.io/rabid/
 
 ## Author
 
-Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)).
+Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)). Forked from [Orange-Cyberdefense/rabid](https://github.com/Orange-Cyberdefense/rabid).
