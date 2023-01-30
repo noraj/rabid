@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+- Chore:
+  - Add support for Ruby 3.2
+
 ## [0.1.0]
 
 - Dependencies:
