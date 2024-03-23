@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     'documentation_uri'     => 'https://noraj.github.io/rabid/',
     'homepage_uri'          => 'https://noraj.github.io/rabid/',
     'source_code_uri'       => 'https://github.com/noraj/rabid/',
+    'funding_uri'           => 'https://github.com/sponsors/noraj',
     'rubygems_mfa_required' => 'true'
   }
 
