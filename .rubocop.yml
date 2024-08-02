@@ -32,4 +32,5 @@ Style/BisectedAttrAccessor:
   Enabled: false # for yard
 Style/RedundantReturn:
   Enabled: false
-
+Gemspec/AddRuntimeDependency: # this is style
+  Enabled: false # https://github.com/rubocop/rubocop/pull/13030#discussion_r1674791776
