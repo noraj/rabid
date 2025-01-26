@@ -2,8 +2,10 @@
 
 ## [Unreleased]
 
+- **Breaking changes**:
+  - Drop Ruby 3.0 support (EOL)
 - Chore:
-  - Add support for Ruby 3.2
+  - Add support for Ruby 3.2, 3.3, 3.4
 
 ## [0.1.0]
 
