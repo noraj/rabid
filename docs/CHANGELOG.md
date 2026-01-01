@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0]
+
+- **Breaking changes**:
+  - Drop Ruby 3.1 support (EOL)
+- Chore:
+  - Add support for Ruby 4.0
+  - Update dependencies
+
 ## [0.2.0]
 
 - **Breaking changes**:
