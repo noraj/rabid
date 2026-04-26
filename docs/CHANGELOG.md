@@ -1,4 +1,11 @@
-# Changelog
+# Change log / Release notes
+
+## unreleased
+
+- **Breaking change**:
+  - Drop support for Ruby 3.2
+    - Ruby 3.2 is ([EOL](https://www.ruby-lang.org/en/downloads/branches/))
+    - parallel-2.1.0 requires ruby version >= 3.3
 
 ## [0.3.0]
 
